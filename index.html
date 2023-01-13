@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="https://d3k81ch9hvuctc.cloudfront.net/company/VwQZuv/images/c23e2236-6387-4961-a887-ac1e7b7bd6cc.jpeg" class="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Software Developer</p>
+                    <h1> Welcome to my portfolio!<br>My name is<span> Tanjeem</span> Hossain!</h1>
+                </div>
+            </div>
+        </div>
+<!-- ------------------ ABOUT -------------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/linkedinPhoto.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am a second year Management Engineer at the University of Waterloo.
+                            Management Engineers develop expertise in design, developing, maintaining, 
+                            testing, and evaluating computer software for companies and organizations.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills"> <!-- skills -->
+                            <ul>
+                                <li><span>Java</span><br>Object-Oriented Programming</li>
+                                <li><span>HTML/CSS</span><br>Designing Modern Web Interfaces</li>
+                                <li><span>SQL</span><br>Manipulating Database Data using SQL Server Management Studio</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience"> <!-- experience -->
+                            <ul>
+                                <li><span>Jr. IT App Developer</span><br>January 2023 - April 2023</li>
+                                <li><span>Supply Chain Analyst</span><br>May 2022 - August 2022</li>
+                                <li><span>Google Search Ads Developer (Fiverr - Freelance)</span><br>January 2021 - August 2021</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education"> <!-- education -->
+                            <ul>
+                                <li><span>BASC. Honours Management Engineering</span><br>University of Waterloo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<!------------------------ projects -------------------------->
+
+        <div id="projects">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="projects-list">
+                    <div>
+                        <h2>Turtle Race</h2>
+                        <p>Coloured turtles line up on the start line, 
+                        and will proceed towards the finish line at random increments with a tap of the ENTER key.</p>
+                    </div>
+                    <div>
+                        <h2>Graphical User Interface</h2>
+                        <p>A window pops up with a button and a count. With each click of the button, 
+                        the count will increase by one. If the button is clicked at over 100 clicks per second, 
+                        the program will automatically malfunction due to acknowledgement of using an auto-clicker function.</p>
+                    </div>
+                    <div>
+                        <h2>Web Portfolio</h2>
+                        <p>My own personal website that highlights about me, my skills/accomplishments, my projects, and how to contact me.
+                        Demonstrated expertise in HTML/CSS and JavaScript in creating modern web pages.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p>tanjeem.hossain@uwaterloo.ca</p>
+                        <p>(416) - 997 - 2577</p>
+                        <a href="images/CV.pdf" download class="btn">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © TanjeemHossain™.</p>
+            </div>
+        </div>
+
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+        </script>
+
+
+
+
+    </body>
+</html>
+
